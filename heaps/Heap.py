@@ -6,14 +6,14 @@ class Heap:
         self.maximum = array[0]
         self.heapsize = len(self.heap)
 
-    def display_heap(self):
-        layers = floor(log2(self.heapsize))
-        maxspaces = 5*(2**layers)+(2**layers-1)
-        heap_read_in = self.heap
-        for i in range(layers):
-            num_in_layer = 2**i
-            
-        return
+    # def display_heap(self):
+    #     layers = floor(log2(self.heapsize))
+    #     maxspaces = 5*(2**layers)+(2**layers-1)
+    #     heap_read_in = self.heap
+    #     for i in range(layers):
+    #         num_in_layer = 2**i
+    #
+    #     return
 
     def heap_maximum(self):
         return self.maximum
@@ -51,6 +51,8 @@ class Heap:
 
         parent_idx = None
 
+        if(index==0):
+            return 0
         if(index%2 == 0):
             parent_idx = int((index-2)/2)
         else:
